@@ -7,6 +7,7 @@ export default function Home() {
     <div className={styles.container}>
       <Head>
         <title>mtnguyen.dev</title>
+        <link rel="icon" href="/favicon.webp" />
       </Head>
       <main>
         <div className={styles.navbar}>
