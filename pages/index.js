@@ -28,9 +28,6 @@ export default function Home() {
             <p>This is a fun little place where I can showcase my projects and interests!</p>
           </div>
         </div>
-        <div className={styles.about}>
-          <p>A little about me!</p>
-        </div>
       <p className={styles.dev}>Projects and References page still under development. Stay Tuned!</p>
       </main>
       <footer>
