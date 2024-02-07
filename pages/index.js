@@ -17,7 +17,6 @@ export default function Home() {
             <li><Link className={styles.link} href="/references">References</Link></li>
             <li><Link className={styles.link} href="https://drive.google.com/file/d/1Fpui9B5esdEsdEt8bVm1u2akkAkMM9_9/view?usp=drive_link">Resume</Link></li>
           </ul>
-          {/* <button className={styles.btn}>Dark Mode</button> */}
         </div>
         <a href="https://git.io/typing-svg" className={styles.typer}>
           <img src="https://readme-typing-svg.demolab.com?font=Open-sans&weight=300&pause=1000&color=2470F7&center=true&random=false&width=450&lines=%F0%9F%92%BB+Computer+Science+%40+UMN+%F0%9F%92%BB;%F0%9F%8E%93+Expected+Graduation+'25+%F0%9F%8E%93" alt="Typing SVG" /></a>
@@ -29,6 +28,9 @@ export default function Home() {
             <p>This is a fun little place where I can showcase my projects and interests!</p>
           </div>
         </div>
+        {/* <div className={styles.about}>
+          <p>A little about me!</p>
+        </div> */}
       <p className={styles.dev}>Projects and References page still under development. Stay Tuned!</p>
       </main>
       <footer>
