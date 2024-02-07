@@ -23,7 +23,7 @@
 .navbar h2 {
   font-weight: 400;
   font-size: larger;
-  padding-left: 35%;
+  padding-left: 32%;
 }
 
 .navbar ul {
@@ -88,4 +88,104 @@
     width: 100%;
     flex-direction: column;
   }
+}
+
+.projectList {
+  list-style-type: none; /* Removes bullet points */
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers items vertically in the container */
+}
+
+.projectItem {
+  margin-bottom: 3rem; /* Space between items */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35%;
+  border: 1px solid #666;
+  border-radius: 1rem;
+  padding: 18px 30px;
+  text-decoration: none;
+  color: rgb(62, 93, 217);
+}
+
+.projectContent {
+  text-align: center; /* Centers the text within the project content */
+}
+
+.projectImage {
+  width: 80px; /* Adjust size as needed */
+  margin-right: 2rem;
+}
+
+.projectTitle {
+  font-size: 1.2rem; /* Adjust size as needed */
+  margin: 0;
+}
+
+.projectDescription {
+  font-size: 0.9rem; /* Adjust size as needed */
+  color: #666; /* Adjust color as needed */
+}
+
+.buttonOverlay img{
+  max-width: 80%; /* Adjust as needed */
+  max-height: 80vh; /* Adjust as needed */
+  margin-top: 2%; /* Centers horizontally */
+}
+
+.buttonOverlay {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn {
+  font-family: 'Gaegu', sans-serif;
+  font-size: xx-large;
+  position: absolute;
+  top: 73%;
+  left: 53%;
+  transform: translate(-50%, -50%);
+  padding: 10px 28px;
+  background-color: #e378d1f7;
+  color: #fff;
+  border-radius: 5px;
+
+}
+.buttonOverlay button:hover {
+  background-color: #ee8ee2f7;
+}
+
+.options {
+  display: block;
+  margin-top: 2rem;
+  margin-left: 43%;
+}
+
+.bg {
+  background-image: url('/valentine/background.jpeg');
+  background-size: cover; /* Cover the entire area of the div */
+  position: fixed; 
+  top: -50%; 
+  left: -50%; 
+  width: 200%; 
+  height: 200%;
+}
+.bg img {
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  margin: auto; 
+  min-width: 50%;
+  min-height: 50%;
+}
+
+.valentineFont{
+  font-family: 'Gaegu', sans-serif;
+  font-size: xx-large;
 }
