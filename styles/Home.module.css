@@ -146,11 +146,12 @@
   font-family: 'Gaegu', sans-serif;
   font-size: 4rem;
   position: absolute;
-  top: 70%;
-  left: 49%;
+  top: 74%;
+  left: 53%;
   color: #fff;
   background: none;
   border: none;
+  transform: translate(-50%, -50%);
 }
 
 .buttonOverlay button:hover {
