@@ -75,15 +75,23 @@ export default function ValentinesHome() {
                 </div>
             </form>
             {emote.show && (
-                <img src={emote.type === 'no' ? "/valentine/no.JPG" : "/valentine/peepokiss.webp"} alt={emote.type} style={{
+                <div style={{
                     position: 'fixed',
                     bottom: '20px',
                     left: '20px',
-                    width: '66px', // size
-                    height: 'auto',
                     zIndex: 1000,
-                    display: emote.show ? 'block' : 'none',
-                }} />
+                    display: 'flex', // Use flexbox to lay out the image and text next to each other
+                    alignItems: 'center', // Center-align items vertically
+                }}>
+                    <img src={emote.type === 'no' ? "/valentine/no.JPG" : "/valentine/peepokiss.webp"} alt={emote.type} style={{
+                        width: '70px', // Adjust size as needed
+                        height: 'auto',
+                        marginRight: '10px', // Add some space between the image and the text
+                    }}/>
+                    <span className={styles.valentineFont}>
+                        {emote.type === 'no' ? 'my honest reaction.' : 'please? :c'}
+                    </span>
+                </div>
             )}
         </div>
       </main>
