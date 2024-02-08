@@ -144,14 +144,15 @@
 
 .btn {
   font-family: 'Gaegu', sans-serif;
-  font-size: 5rem;
+  font-size: 4rem;
   position: absolute;
-  top: 66%;
+  top: 70%;
   left: 49%;
   color: #fff;
   background: none;
   border: none;
 }
+
 .buttonOverlay button:hover {
   color: #ee8ee2f7;
 }
