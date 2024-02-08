@@ -144,19 +144,16 @@
 
 .btn {
   font-family: 'Gaegu', sans-serif;
-  font-size: xx-large;
+  font-size: 5rem;
   position: absolute;
-  top: 73%;
-  left: 53%;
-  transform: translate(-50%, -50%);
-  padding: 10px 28px;
-  background-color: #e378d1f7;
+  top: 66%;
+  left: 49%;
   color: #fff;
-  border-radius: 5px;
-
+  background: none;
+  border: none;
 }
 .buttonOverlay button:hover {
-  background-color: #ee8ee2f7;
+  color: #ee8ee2f7;
 }
 
 .options {
