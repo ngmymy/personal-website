@@ -15,7 +15,7 @@ export default function Home() {
           <ul>
             <li><Link className={styles.link} href="/projects">Projects</Link></li>
             <li><Link className={styles.link} href="/references">References</Link></li>
-            <li><Link className={styles.link} href="https://drive.google.com/file/d/1Fpui9B5esdEsdEt8bVm1u2akkAkMM9_9/view?usp=drive_link">Resume</Link></li>
+            <li><Link className={styles.link} href="https://drive.google.com/file/d/1IXGCybrKieyE_87XDYU2g6eMZ4bONmlV/view?usp=drive_link">Resume</Link></li>
           </ul>
         </div>
         <a href="https://git.io/typing-svg" className={styles.typer}>
@@ -35,7 +35,7 @@ export default function Home() {
       </main>
       <footer>
         <a href="https://github.com/ngmymy" target="_blank" rel="noopener noreferrer">
-          last updated on 11/24/2023
+          last updated on 08/03/2024
         </a>
       </footer>
 
