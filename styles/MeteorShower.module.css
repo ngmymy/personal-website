@@ -1,0 +1,178 @@
+/* Meteor Shower Background Effect */
+.meteorShower {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+}
+
+.meteor {
+  position: absolute;
+  width: 2px;
+  height: 60px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #fff 50%, rgba(255, 255, 255, 0) 100%);
+  border-radius: 50px;
+  animation: meteorFall linear infinite;
+  opacity: 0;
+  transform-origin: center center;
+}
+
+.meteor:nth-child(1) { 
+  left: 10%; 
+  animation-duration: 3s; 
+  animation-delay: 0s;
+  background: linear-gradient(to bottom, rgba(255, 182, 193, 0) 0%, #ffb6c1 50%, rgba(255, 182, 193, 0) 100%);
+}
+
+.meteor:nth-child(2) { 
+  left: 20%; 
+  animation-duration: 4s; 
+  animation-delay: 1s;
+  background: linear-gradient(to bottom, rgba(173, 216, 230, 0) 0%, #add8e6 50%, rgba(173, 216, 230, 0) 100%);
+}
+
+.meteor:nth-child(3) { 
+  left: 30%; 
+  animation-duration: 3.5s; 
+  animation-delay: 2.5s;
+  background: linear-gradient(to bottom, rgba(255, 218, 185, 0) 0%, #ffdab9 50%, rgba(255, 218, 185, 0) 100%);
+}
+
+.meteor:nth-child(4) { 
+  left: 40%; 
+  animation-duration: 5s; 
+  animation-delay: 0.5s;
+  background: linear-gradient(to bottom, rgba(221, 160, 221, 0) 0%, #dda0dd 50%, rgba(221, 160, 221, 0) 100%);
+}
+
+.meteor:nth-child(5) { 
+  left: 50%; 
+  animation-duration: 2.8s; 
+  animation-delay: 3s;
+  background: linear-gradient(to bottom, rgba(255, 255, 224, 0) 0%, #ffffe0 50%, rgba(255, 255, 224, 0) 100%);
+}
+
+.meteor:nth-child(6) { 
+  left: 60%; 
+  animation-duration: 4.2s; 
+  animation-delay: 1.8s;
+  background: linear-gradient(to bottom, rgba(152, 251, 152, 0) 0%, #98fb98 50%, rgba(152, 251, 152, 0) 100%);
+}
+
+.meteor:nth-child(7) { 
+  left: 70%; 
+  animation-duration: 3.8s; 
+  animation-delay: 0.3s;
+  background: linear-gradient(to bottom, rgba(255, 192, 203, 0) 0%, #ffc0cb 50%, rgba(255, 192, 203, 0) 100%);
+}
+
+.meteor:nth-child(8) { 
+  left: 80%; 
+  animation-duration: 4.5s; 
+  animation-delay: 2.2s;
+  background: linear-gradient(to bottom, rgba(176, 196, 222, 0) 0%, #b0c4de 50%, rgba(176, 196, 222, 0) 100%);
+}
+
+.meteor:nth-child(9) { 
+  left: 85%; 
+  animation-duration: 3.2s; 
+  animation-delay: 1.5s;
+  background: linear-gradient(to bottom, rgba(255, 228, 181, 0) 0%, #ffe4b5 50%, rgba(255, 228, 181, 0) 100%);
+}
+
+.meteor:nth-child(10) { 
+  left: 90%; 
+  animation-duration: 4.8s; 
+  animation-delay: 0.8s;
+  background: linear-gradient(to bottom, rgba(230, 230, 250, 0) 0%, #e6e6fa 50%, rgba(230, 230, 250, 0) 100%);
+}
+
+@keyframes meteorFall {
+  0% {
+    transform: translateY(-100vh) translateX(200px) rotate(25deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) translateX(-300px) rotate(25deg);
+    opacity: 0;
+  }
+}
+
+/* Cute Stars */
+.star {
+  position: absolute;
+  color: #fff;
+  font-size: 12px;
+  animation: twinkle 2s infinite;
+  user-select: none;
+}
+
+.star:nth-child(odd) {
+  animation-delay: 1s;
+  color: #ffd700;
+}
+
+.star:nth-child(even) {
+  color: #fff;
+}
+
+.star:nth-child(3n) {
+  color: #ff69b4;
+  animation-duration: 3s;
+}
+
+.star:nth-child(5n) {
+  color: #87ceeb;
+  animation-duration: 1.5s;
+}
+
+@keyframes twinkle {
+  0%, 100% { 
+    opacity: 0.3;
+    transform: scale(0.8);
+  }
+  50% { 
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+/* Shooting star trail effect */
+.meteor::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 1px;
+  height: 30px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 100%);
+  transform: translateX(-50%);
+  animation: trail linear infinite;
+  animation-duration: inherit;
+  animation-delay: inherit;
+}
+
+@keyframes trail {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

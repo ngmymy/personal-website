@@ -1,84 +1,205 @@
 import Head from 'next/head';
-import styles from '../styles/Home.module.css';
-import Link from 'next/link'
+import { useState, useEffect } from 'react';
+import Link from 'next/link';
+import Navbar from '../components/navbar';
+import MeteorShower from '../components/MeteorShower';
+import styles from '../styles/Projects.module.css';
 
 export default function Projects() {
+  const [hoveredProject, setHoveredProject] = useState(null);
+  const [filterTag, setFilterTag] = useState('all');
+
   const projects = [
     {
       id: 1,
-      title: "Valentine's Day Website",
-      description: "A fun little creation for my friends <3",
-      imageUrl: "/valentine/cupid.avif",
-      href: "/valentines-website"
+      title: "3D Portfolio Experience",
+      description: "An immersive 3D rendered version of my portfolio using Three.js, featuring interactive 3D models, particle systems, and smooth camera animations",
+      imageUrl: "/3d-portfolio-preview.png",
+      href: "/3d-portfolio",
+      tags: ['Three.js', '3D Graphics', 'WebGL'],
+      techStack: ['Three.js', 'React', 'WebGL', 'GLSL'],
+      features: ['3D Scene Rendering', 'Interactive Models', 'Particle Effects', 'Camera Controls']
     },
-    // {
-    //   id: 2,
-    //   title: "Project 2",
-    //   description: "This is a brief description of Project 2.",
-    //   imageUrl: "/path/to/your/image2.png",
-    //   href: ''
-    // },
-    // Add more projects as needed
+    {
+      id: 2,
+      title: "AI-Powered Portfolio",
+      description: "This very portfolio! Features meteor shower animations, AI chat widget, typing effects, and advanced React patterns",
+      imageUrl: "/portfolio-preview.png",
+      href: "/",
+      tags: ['React', 'GenAI', 'Animation'],
+      techStack: ['Next.js', 'React Hooks', 'CSS Modules'],
+      features: ['AI Chat Bot', 'Meteor Animation', 'Parallax Effects']
+    },
+    {
+      id: 3,
+      title: "Coming Soon: ML Project",
+      description: "An exciting machine learning project in development using Python and TensorFlow",
+      imageUrl: "/ml-preview.png",
+      href: "#",
+      tags: ['Python', 'ML', 'Data Science'],
+      techStack: ['Python', 'TensorFlow', 'Pandas'],
+      features: ['Data Analysis', 'Model Training', 'Visualization'],
+      isComingSoon: true
+    }
   ];
+
+  const allTags = ['all', ...new Set(projects.flatMap(project => project.tags))];
+
+  const filteredProjects = filterTag === 'all' 
+    ? projects 
+    : projects.filter(project => project.tags.includes(filterTag));
+
   return (
     <div className={styles.container}>
       <Head>
-        <title>mtnguyen.dev</title>
+        <title>Projects - My My Nguyen</title>
+        <meta name="description" content="Explore My My's creative projects featuring React, GenAI, and interactive web experiences" />
         <link rel="icon" href="/favicon.webp" />
       </Head>
-      <main>
-        <div className={styles.navbar}>
-            <h2><Link className={styles.link} href="/">My My Nguyen</Link></h2>
-            <ul>
-                <li><Link className={styles.link} href="/projects">Projects</Link></li>
-                <li><Link className={styles.link} href="/references">References</Link></li>
-                <li><Link className={styles.link} href="https://drive.google.com/file/d/1Fpui9B5esdEsdEt8bVm1u2akkAkMM9_9/view?usp=drive_link">Resume</Link></li>
-            </ul>
-            {/* <button className={styles.btn}>Dark Mode</button> */}
+
+      <MeteorShower />
+
+      <Navbar />
+      
+      <div className={styles.content}>
+        <div className={styles.header}>
+          <h1 className={styles.title}>My Projects</h1>
+          <p className={styles.subtitle}>
+            Explore my journey through code, creativity, and innovation
+          </p>
         </div>
-        <ul className={styles.projectList}>
-            {projects.map(project => (
-                <a href={project.href} className={styles.projectItem}>
-                    <li key={project.id}>
-                    <div className={styles.projectContent}>
-                        <img src={project.imageUrl} className={styles.projectImage} alt={project.title} />
-                        <h3 className={styles.projectTitle}>{project.title}</h3>
-                        <p className={styles.projectDescription}>{project.description}</p>
-                    </div>
-                    </li>
-                </a>
-            ))}
-        </ul>
-      </main>
-      <footer>
+
+        {/* Filter Tags */}
+        <div className={styles.filterContainer}>
+          {allTags.map(tag => (
+            <button
+              key={tag}
+              className={`${styles.filterTag} ${filterTag === tag ? styles.activeTag : ''}`}
+              onClick={() => setFilterTag(tag)}
+            >
+              {tag}
+            </button>
+          ))}
+        </div>
+
+        {/* Projects Grid */}
+        <div className={styles.projectsGrid}>
+          {filteredProjects.map((project, index) => (
+            <div
+              key={project.id}
+              className={`${styles.projectCard} ${project.isComingSoon ? styles.comingSoon : ''}`}
+              onMouseEnter={() => setHoveredProject(project.id)}
+              onMouseLeave={() => setHoveredProject(null)}
+              style={{
+                animationDelay: `${index * 0.1}s`
+              }}
+            >
+              {project.isComingSoon && (
+                <div className={styles.comingSoonBadge}>Coming Soon</div>
+              )}
+              
+              <div className={styles.projectImageContainer}>
+                <img 
+                  src={project.imageUrl} 
+                  alt={project.title}
+                  className={styles.projectImage}
+                />
+                {hoveredProject === project.id && !project.isComingSoon && (
+                  <div className={styles.projectOverlay}>
+                    <Link href={project.href} className={styles.viewProject}>
+                      View Project →
+                    </Link>
+                  </div>
+                )}
+              </div>
+
+              <div className={styles.projectContent}>
+                <h3 className={styles.projectTitle}>{project.title}</h3>
+                <p className={styles.projectDescription}>{project.description}</p>
+                
+                <div className={styles.techStack}>
+                  <h4>Tech Stack:</h4>
+                  <div className={styles.techTags}>
+                    {project.techStack.map(tech => (
+                      <span key={tech} className={styles.techTag}>{tech}</span>
+                    ))}
+                  </div>
+                </div>
+
+                <div className={styles.features}>
+                  <h4>Key Features:</h4>
+                  <ul className={styles.featureList}>
+                    {project.features.map(feature => (
+                      <li key={feature}>{feature}</li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className={styles.projectTags}>
+                  {project.tags.map(tag => (
+                    <span key={tag} className={styles.projectTag}>{tag}</span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className={styles.callToAction}>
+          <h3>Interested in collaborating?</h3>
+          <p>I'm always excited to work on new projects and explore innovative technologies!</p>
+          <Link 
+            href="https://drive.google.com/file/d/1IXGCybrKieyE_87XDYU2g6eMZ4bONmlV/view?usp=drive_link"
+            className={styles.ctaButton}
+            target="_blank"
+          >
+            Let's Connect! 🚀
+          </Link>
+        </div>
+      </div>
+
+      <footer className={styles.footer}>
         <a href="https://github.com/ngmymy" target="_blank" rel="noopener noreferrer">
-          last updated on 2/5/2024
+          🌟 Built with passion and modern web technologies • {new Date().toLocaleDateString()}
         </a>
       </footer>
-      <style jsx>{`
+
+      <style jsx global>{`
         * {
+          margin: 0;
+          padding: 0;
           box-sizing: border-box;
         }
-        main {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          margin: auto;
+        
+        html, body {
+          overflow-x: hidden;
         }
-        footer {
-          width: 100%;
-          height: 100px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
+        
+        body {
+          font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
         }
-        footer a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          text-decoration: none;
-          color: rgb(185, 185, 185);
-          font-size: small;
+        
+        /* Smooth scrolling */
+        html {
+          scroll-behavior: smooth;
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+          width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+          background: rgba(255, 255, 255, 0.1);
+        }
+        
+        ::-webkit-scrollbar-thumb {
+          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+          border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+          background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
         }
       `}</style>
     </div>
