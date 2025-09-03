@@ -6,6 +6,7 @@ import Navbar from '../components/navbar';
 import TypingAnimation from '../components/TypingAnimation';
 import SkillShowcase from '../components/SkillShowcase';
 import AIChatWidget from '../components/AIChatWidget';
+import Footer from '../components/footer';
 
 export default function Home() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -64,12 +65,13 @@ export default function Home() {
               <p>Welcome to my interactive portfolio!</p>
               <p>
                 I'm a Computer Science student at UMN with a passion for creating 
-                engaging web experiences using React, Next.js, and cutting-edge GenAI technologies.
+                engaging web experiences using React, and useful apps for daily life style.
               </p>
               <p>
                 This portfolio showcases my journey in full-stack development, 
                 featuring everything from interactive animations to AI-powered chat widgets!
               </p>
+              <p>I still have a few projects to add so stay tuned!</p>
             </div>
           </div>
 
@@ -79,19 +81,9 @@ export default function Home() {
             
           </div> */}
         </div>
-
-        <footer className={styles.footer}>
-          <a 
-            href="https://github.com/ngmymy" 
-            target="_blank" 
-            rel="noopener noreferrer"
-          >
-            🌟 Built with React, Next.js & GenAI • Last updated {new Date().toLocaleDateString()}
-          </a>
-        </footer>
+        <Footer />
       </main>
 
-      {/* AI Chat Widget */}
       <AIChatWidget />
 
       <style jsx global>{`

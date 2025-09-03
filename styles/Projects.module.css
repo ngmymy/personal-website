@@ -37,7 +37,7 @@
 
 .subtitle {
   font-size: 1.2rem;
-  color: #666;
+  color: #c3c3c3;
   font-weight: 300;
 }
 
@@ -175,7 +175,7 @@
 }
 
 .projectDescription {
-  color: #666;
+  color: #212121;
   line-height: 1.6;
   margin-bottom: 1.5rem;
   font-size: 0.95rem;
@@ -199,8 +199,8 @@
 }
 
 .techTag {
-  background: rgba(102, 126, 234, 0.1);
-  color: #667eea;
+  background: rgba(65, 89, 196, 0.5);
+  color: #e6e6e6;
   padding: 0.3rem 0.8rem;
   border-radius: 12px;
   font-size: 0.8rem;
@@ -227,14 +227,14 @@
 
 .featureList li {
   font-size: 0.85rem;
-  color: #666;
+  color: #3a3a3a;
   margin-bottom: 0.3rem;
   position: relative;
   padding-left: 1rem;
 }
 
 .featureList li::before {
-  content: '✨';
+  content: '➡';
   position: absolute;
   left: 0;
   top: 0;
@@ -276,7 +276,7 @@
 }
 
 .callToAction p {
-  color: #666;
+  color: #c6c5c5;
   margin-bottom: 1.5rem;
   font-size: 1.1rem;
 }
@@ -297,27 +297,6 @@
 .ctaButton:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
-}
-
-.footer {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 1.5rem;
-  text-align: center;
-  position: relative;
-  z-index: 10;
-}
-
-.footer a {
-  color: #666;
-  text-decoration: none;
-  font-size: 0.9rem;
-  transition: color 0.3s ease;
-}
-
-.footer a:hover {
-  color: #333;
 }
 
 @keyframes fadeInUp {

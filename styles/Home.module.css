@@ -149,17 +149,28 @@
   padding: 1.5rem;
   text-align: center;
   margin-top: auto;
+  margin-right: 8px;
+  color: #e1e1e1;
+  font-size: 0.9rem;
 }
 
 .footer a {
-  color: #666;
+  color: #e1e1e1;
+  /* color: #b3b3b3; */
   text-decoration: none;
   font-size: 0.9rem;
   transition: color 0.3s ease;
 }
 
 .footer a:hover {
-  color: #333;
+  color: #cbcbcb;
+}
+
+.footerLink {
+  /* color: #e1e1e1; */
+  text-decoration: none;
+  margin-right: 5px;
+  margin-left: 5px;
 }
 
 /* Floating elements */

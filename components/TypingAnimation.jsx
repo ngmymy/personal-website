@@ -7,11 +7,11 @@ const TypingAnimation = () => {
   const [typeSpeed, setTypeSpeed] = useState(150);
 
   const texts = [
-    '💻 Computer Science @ UMN 💻',
-    '🎓 Expected Graduation \'25 🎓',
-    '🚀 Full-Stack Developer 🚀',
-    '✨ GenAI Enthusiast ✨',
-    '🎨 Creative Problem Solver 🎨'
+    'Computer Science New Grad',
+    'Graduated May 2025',
+    'Full-Stack Developer',
+    'Tech Enthusiast',
+    'Creative Problem Solver'
   ];
 
   useEffect(() => {
