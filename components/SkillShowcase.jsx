@@ -181,7 +181,7 @@ const SkillShowcase = () => {
               border: `1px solid ${isExpanded ? 'rgba(234, 102, 102, 0.3)' : 'rgba(15, 114, 48, 0.3)'}`,
               borderRadius: '10px',
               padding: '0.5rem 1rem',
-              color: isExpanded ? '#932020ff' : '#1c2d65ff',
+              color: '#e5e4e4ff',
               fontSize: '0.9rem',
               fontWeight: '500',
               cursor: 'pointer',

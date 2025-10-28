@@ -8,7 +8,7 @@ const MeteorShower = () => {
     // Generate random stars
     const generateStars = () => {
       const newStars = [];
-      for (let i = 0; i < 50; i++) {
+      for (let i = 0; i < 40; i++) {
         newStars.push({
           id: i,
           left: Math.random() * 100,

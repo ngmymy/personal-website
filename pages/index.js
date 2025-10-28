@@ -38,11 +38,6 @@ export default function Home() {
       {/* Meteor Shower Background */}
       <MeteorShower />
 
-      {/* Floating Elements */}
-      <div className={styles.floatingElement} style={parallaxStyle}>💻</div>
-      <div className={styles.floatingElement} style={parallaxStyle}>🚀</div>
-      <div className={styles.floatingElement} style={parallaxStyle}>⭐</div>
-
       <main className={styles.main}>
         <Navbar />
         
