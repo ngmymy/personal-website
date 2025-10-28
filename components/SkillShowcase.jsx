@@ -8,42 +8,46 @@ const SkillShowcase = () => {
   const mainStackSkillsInitial = [
     { name: 'JavaScript', icon: '/icons/javascript-original.svg', description: 'Core programming', isImage: true },
     { name: 'Python', icon: '/icons/python-original.svg', description: 'Data & AI projects', isImage: true },
+    { name: 'CSharp', icon: '/icons/csharp-original.svg', description: 'Building Automated Test Scripts', isImage: true },
     { name: 'Git', icon: '/icons/git-original.svg', description: 'Version control', isImage: true },
     { name: 'React', icon: '/icons/react-original.svg', description: 'Building dynamic UIs', isImage: true },
-    { name: 'CSS3', icon: '/icons/css3-original.svg', description: 'Modern styling', isImage: true },
-    { name: '.NET', icon: '/icons/dot-net-original.svg', description: 'Building Web Applications', isImage: true }
+    { name: 'CSS3', icon: '/icons/css3-original.svg', description: 'Modern styling', isImage: true }
+    
   ];
 
   const mainStackSkillsExpanded = [
     { name: 'JavaScript', icon: '/icons/javascript-original.svg', description: 'Core programming', isImage: true },
     { name: 'Python', icon: '/icons/python-original.svg', description: 'Data & AI projects', isImage: true },
+    { name: 'CSharp', icon: '/icons/csharp-original.svg', description: 'Building Automated Test Scripts', isImage: true },
     { name: 'Git', icon: '/icons/git-original.svg', description: 'Version control', isImage: true },
     { name: 'React', icon: '/icons/react-original.svg', description: 'Building dynamic UIs', isImage: true },
     { name: 'CSS3', icon: '/icons/css3-original.svg', description: 'Modern styling', isImage: true },
-    { name: '.NET', icon: '/icons/dot-net-original.svg', description: 'Building Web Applications', isImage: true },
     { name: 'HTML', icon: '/icons/html5-original.svg', description: 'Simple websites', isImage: true },
-    { name: 'Node.js', icon: '/icons/nodejs-original.svg', description: 'Backend development', isImage: true }
+    { name: 'C++', icon: '/icons/cplusplus.svg', description: 'Building Automated Test Scripts', isImage: true },
+    { name: 'C', icon: '/icons/c.svg', description: 'Building Automated Test Scripts', isImage: true },
+    { name: 'Node.js', icon: '/icons/nodejs-original.svg', description: 'Backend development', isImage: true },
+    { name: 'Figma', icon: '/icons/figma-original.svg', description: 'User Design Interface', isImage: true }
   ];
 
   const secondarySkills = [
+    { name: '.NET', icon: '/icons/dot-net-original.svg', description: 'Building Web Applications', isImage: true },
     { name: 'Raspberry Pi', icon: '/icons/raspberrypi-original.svg', description: 'Mini Systems', isImage: true },
-    { name: 'GenAI', icon: '🤖', description: 'AI/ML integration' },
     { name: 'MongoDB', icon: '/icons/mongodb-original.svg', description: 'NoSQL database', isImage: true },
     { name: 'Docker', icon: '/icons/docker-original.svg', description: 'Containerization', isImage: true },
     { name: 'Next.js', icon: '/icons/nextjs-original.svg', description: 'Full-stack framework', isImage: true },
     { name: 'Blender', icon: '/icons/blender-original.svg', description: '3D Modeling', isImage: true },
-    { name: 'Figma', icon: '/icons/figma-original.svg', description: 'User Design Interface', isImage: true },
-    { name: 'AWS', icon: '☁️', description: 'Cloud services' },
+    { name: 'Jira', icon: '/icons/jira-original.svg', description: 'Task management', isImage: true },
     { name: 'TypeScript', icon: '📘', description: 'Type-safe JavaScript' },
     { name: 'Express', icon: '⚡', description: 'Node.js framework' }
   ];
 
+  // skill showcase labels
   const renderSkillSection = (skills, title) => (
     <div style={{ marginBottom: '1rem' }}>
       <h4 style={{
-        fontSize: '1rem',
-        marginBottom: '1.5rem',
-        color: '#e2e8f0',
+        fontSize: '15px',
+        marginBottom: '1rem',
+        color: '#e1e5ebff',
         fontWeight: '600',
         textAlign: 'center',
         letterSpacing: '0.5px',

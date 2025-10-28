@@ -60,7 +60,7 @@ export default function Home() {
               style={parallaxStyle}
             />
             <div className={styles.text}>
-              <h3>Hi There! 👋</h3>
+              <h3>Hi! I'm My My 👋</h3>
               <p>Welcome to my interactive portfolio!</p>
               <p>
                 I'm a Computer Science student at UMN with a passion for creating 
