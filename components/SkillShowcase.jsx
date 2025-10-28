@@ -6,7 +6,6 @@ const SkillShowcase = () => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const mainStackSkillsInitial = [
-    { name: 'JavaScript', icon: '/icons/javascript-original.svg', description: 'Core programming', isImage: true },
     { name: 'Python', icon: '/icons/python-original.svg', description: 'Data & AI projects', isImage: true },
     { name: 'CSharp', icon: '/icons/csharp-original.svg', description: 'Building Automated Test Scripts', isImage: true },
     { name: 'Git', icon: '/icons/git-original.svg', description: 'Version control', isImage: true },
@@ -16,7 +15,6 @@ const SkillShowcase = () => {
   ];
 
   const mainStackSkillsExpanded = [
-    { name: 'JavaScript', icon: '/icons/javascript-original.svg', description: 'Core programming', isImage: true },
     { name: 'Python', icon: '/icons/python-original.svg', description: 'Data & AI projects', isImage: true },
     { name: 'CSharp', icon: '/icons/csharp-original.svg', description: 'Building Automated Test Scripts', isImage: true },
     { name: 'Git', icon: '/icons/git-original.svg', description: 'Version control', isImage: true },
@@ -35,10 +33,10 @@ const SkillShowcase = () => {
     { name: 'MongoDB', icon: '/icons/mongodb-original.svg', description: 'NoSQL database', isImage: true },
     { name: 'Docker', icon: '/icons/docker-original.svg', description: 'Containerization', isImage: true },
     { name: 'Next.js', icon: '/icons/nextjs-original.svg', description: 'Full-stack framework', isImage: true },
+    { name: '.NET', icon: '/icons/dot-net-original.svg', description: 'Building Web Applications', isImage: true },
     { name: 'Blender', icon: '/icons/blender-original.svg', description: '3D Modeling', isImage: true },
     { name: 'Jira', icon: '/icons/jira-original.svg', description: 'Task management', isImage: true },
     { name: 'TypeScript', icon: '📘', description: 'Type-safe JavaScript' },
-    { name: 'Express', icon: '⚡', description: 'Node.js framework' }
   ];
 
   // skill showcase labels
@@ -155,7 +153,7 @@ const SkillShowcase = () => {
   return (
     <div className={styles.skillsSection}>
       <div style={{
-        background: 'rgba(255, 255, 255, 0.15)',
+        background: 'rgba(195, 195, 195, 0.6)',
         backdropFilter: 'blur(15px)',
         padding: '2rem',
         borderRadius: '20px',
@@ -177,8 +175,8 @@ const SkillShowcase = () => {
           <button
             onClick={() => setIsExpanded(!isExpanded)}
             style={{
-              background: isExpanded ? 'linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #db2777 100%)' : 'linear-gradient(135deg, #34d399 0%, #3b82f6 50%, #8b5cf6 100%)',
-              border: `1px solid ${isExpanded ? 'rgba(234, 102, 102, 0.3)' : 'rgba(15, 114, 48, 0.3)'}`,
+              background: isExpanded ? '#e392a8ff' : '#8dd196ff' ,
+              border: `1px solid ${isExpanded ? '#df4349ff': '#2aa62eff'}`,
               borderRadius: '10px',
               padding: '0.5rem 1rem',
               color: '#e5e4e4ff',

@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Navbar from '../components/navbar';
 import MeteorShower from '../components/MeteorShower';
 import styles from '../styles/Projects.module.css';
+import Footer from '../components/footer';
 
 export default function Projects() {
   const [hoveredProject, setHoveredProject] = useState(null);
@@ -12,16 +13,6 @@ export default function Projects() {
   const projects = [
     {
       id: 1,
-      title: "3D Portfolio Experience",
-      description: "An immersive 3D rendered version of my portfolio using Three.js, featuring interactive 3D models, particle systems, and smooth camera animations",
-      imageUrl: "/3d-portfolio-preview.png",
-      href: "/3d-portfolio",
-      tags: ['Three.js', '3D Graphics', 'WebGL'],
-      techStack: ['Three.js', 'React', 'WebGL', 'GLSL'],
-      features: ['3D Scene Rendering', 'Interactive Models', 'Particle Effects', 'Camera Controls']
-    },
-    {
-      id: 2,
       title: "AI-Powered Portfolio",
       description: "This very portfolio! Features meteor shower animations, AI chat widget, typing effects, and advanced React patterns",
       imageUrl: "/portfolio-preview.png",
@@ -31,7 +22,7 @@ export default function Projects() {
       features: ['AI Chat Bot', 'Meteor Animation', 'Parallax Effects']
     },
     {
-      id: 3,
+      id: 2,
       title: "Coming Soon: ML Project",
       description: "An exciting machine learning project in development using Python and TensorFlow",
       imageUrl: "/ml-preview.png",
@@ -158,11 +149,7 @@ export default function Projects() {
         </div>
       </div>
 
-      <footer className={styles.footer}>
-        <a href="https://github.com/ngmymy" target="_blank" rel="noopener noreferrer">
-          🌟 Built with passion and modern web technologies • {new Date().toLocaleDateString()}
-        </a>
-      </footer>
+      <Footer />
 
       <style jsx global>{`
         * {
