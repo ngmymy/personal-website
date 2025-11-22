@@ -20,6 +20,7 @@
 
 .header {
   text-align: center;
+  margin-top: 2rem;
   margin-bottom: 3rem;
   opacity: 0;
   animation: fadeInUp 1s ease-out 0.3s forwards;
@@ -41,41 +42,13 @@
   font-weight: 300;
 }
 
-.filterContainer {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-bottom: 3rem;
-  flex-wrap: wrap;
-  opacity: 0;
-  animation: fadeInUp 1s ease-out 0.6s forwards;
-}
-
-.filterTag {
-  padding: 0.5rem 1.5rem;
-  border: 2px solid rgba(102, 126, 234, 0.3);
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 25px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-weight: 500;
-  color: #333;
-}
-
-.filterTag:hover,
-.activeTag {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  border-color: transparent;
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
-}
-
 .projectsGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 2rem;
   margin-bottom: 3rem;
+  padding-left: 20%;
+  padding-right: 20%;
 }
 
 .projectCard {
@@ -88,12 +61,13 @@
   opacity: 0;
   animation: fadeInUp 1s ease-out forwards;
   position: relative;
+  min-width: 200px;
 }
 
 .projectCard:hover {
   transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-  border-color: rgba(102, 126, 234, 0.3);
+  box-shadow: 0 20px 40px rgba(188, 184, 184, 0.429);
+  border-color: rgba(223, 225, 233, 0.656);
 }
 
 .comingSoon {
@@ -185,7 +159,7 @@
   margin-bottom: 1rem;
 }
 
-.techStack h4 {
+.techStack h4, .labels {
   font-size: 0.9rem;
   color: #333;
   margin-bottom: 0.5rem;

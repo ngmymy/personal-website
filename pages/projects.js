@@ -8,37 +8,39 @@ import Footer from '../components/footer';
 
 export default function Projects() {
   const [hoveredProject, setHoveredProject] = useState(null);
-  const [filterTag, setFilterTag] = useState('all');
 
   const projects = [
     {
       id: 1,
-      title: "AI-Powered Portfolio",
-      description: "This very portfolio! Features meteor shower animations, AI chat widget, typing effects, and advanced React patterns",
-      imageUrl: "/portfolio-preview.png",
+      title: "AI 2048 Autoplayer",
+      description: "An intelligent agent that masters the 2048 game using advanced AI algorithms including MiniMax, Alpha-Beta pruning, and Monte Carlo Tree Search",
+      imageUrl: "/2048-autoplayer.png",
       href: "/",
-      tags: ['React', 'GenAI', 'Animation'],
-      techStack: ['Next.js', 'React Hooks', 'CSS Modules'],
-      features: ['AI Chat Bot', 'Meteor Animation', 'Parallax Effects']
+      tags: ['Python', 'AI', 'Game Theory'],
+      techStack: ['Python', 'Pygame', 'MCTS Algorithm'],
+      features: ['Different AI Algorithms', 'Automated Gameplay', 'Performance Metrics']
     },
     {
       id: 2,
-      title: "Coming Soon: ML Project",
-      description: "An exciting machine learning project in development using Python and TensorFlow",
-      imageUrl: "/ml-preview.png",
-      href: "#",
-      tags: ['Python', 'ML', 'Data Science'],
-      techStack: ['Python', 'TensorFlow', 'Pandas'],
-      features: ['Data Analysis', 'Model Training', 'Visualization'],
-      isComingSoon: true
+      title: "Gopher Delivery Service",
+      description: "An extensible drone simulation system built with design patterns and agile development. Features battery management, weather systems, and frozen food delivery with comprehensive testing and Docker deployment",
+      imageUrl: "/gopherdelivery.jpg",
+      href: "/gopher-delivery",
+      tags: ['C++', 'Software Engineering', 'Agile'],
+      techStack: ['C++', 'Docker', 'Doxygen'],
+      features: ['Design Patterns', 'Battery & Weather Systems', 'Unit & Integration Testing']
+    },
+    {
+      id: 3,
+      title: "Pickleball Matchmaker",
+      description: "An app that connects pickleball enthusiasts based on skill level, location, and availability. Designed and tested through user research and prototyping.",
+      imageUrl: "/pickleball-app.png",
+      href: "/gopher-delivery",
+      tags: ['UX/UI', 'Collaborative', 'Research Methods', 'Mobile App'],
+      techStack: ['Figma', 'Docker', 'Doxygen'],
+      features: ['Court Availability', 'Skill-based and Local Matchmaking', 'Match Scheduling & Notifications']
     }
   ];
-
-  const allTags = ['all', ...new Set(projects.flatMap(project => project.tags))];
-
-  const filteredProjects = filterTag === 'all' 
-    ? projects 
-    : projects.filter(project => project.tags.includes(filterTag));
 
   return (
     <div className={styles.container}>
@@ -55,27 +57,11 @@ export default function Projects() {
       <div className={styles.content}>
         <div className={styles.header}>
           <h1 className={styles.title}>My Projects</h1>
-          <p className={styles.subtitle}>
-            Explore my journey through code, creativity, and innovation
-          </p>
-        </div>
-
-        {/* Filter Tags */}
-        <div className={styles.filterContainer}>
-          {allTags.map(tag => (
-            <button
-              key={tag}
-              className={`${styles.filterTag} ${filterTag === tag ? styles.activeTag : ''}`}
-              onClick={() => setFilterTag(tag)}
-            >
-              {tag}
-            </button>
-          ))}
         </div>
 
         {/* Projects Grid */}
         <div className={styles.projectsGrid}>
-          {filteredProjects.map((project, index) => (
+          {projects.map((project, index) => (
             <div
               key={project.id}
               className={`${styles.projectCard} ${project.isComingSoon ? styles.comingSoon : ''}`}
@@ -95,15 +81,15 @@ export default function Projects() {
                   alt={project.title}
                   className={styles.projectImage}
                 />
-                {hoveredProject === project.id && !project.isComingSoon && (
+                {/* {hoveredProject === project.id && !project.isComingSoon && (
                   <div className={styles.projectOverlay}>
                     <Link href={project.href} className={styles.viewProject}>
                       View Project →
                     </Link>
                   </div>
-                )}
+                )} */}
               </div>
-
+              
               <div className={styles.projectContent}>
                 <h3 className={styles.projectTitle}>{project.title}</h3>
                 <p className={styles.projectDescription}>{project.description}</p>
@@ -125,8 +111,9 @@ export default function Projects() {
                     ))}
                   </ul>
                 </div>
-
+                <h4 className={styles.labels}>Skill set:</h4>
                 <div className={styles.projectTags}>
+                  
                   {project.tags.map(tag => (
                     <span key={tag} className={styles.projectTag}>{tag}</span>
                   ))}
@@ -134,18 +121,6 @@ export default function Projects() {
               </div>
             </div>
           ))}
-        </div>
-
-        <div className={styles.callToAction}>
-          <h3>Interested in collaborating?</h3>
-          <p>I'm always excited to work on new projects and explore innovative technologies!</p>
-          <Link 
-            href="https://drive.google.com/file/d/1IXGCybrKieyE_87XDYU2g6eMZ4bONmlV/view?usp=drive_link"
-            className={styles.ctaButton}
-            target="_blank"
-          >
-            Let's Connect! 🚀
-          </Link>
         </div>
       </div>
 

@@ -59,14 +59,13 @@ export default function Home() {
               <h3>Hi! I'm My My 👋</h3>
               <p>Welcome to my interactive portfolio!</p>
               <p>
-                I'm a Computer Science student at UMN with a passion for creating 
-                engaging web experiences using React, and useful apps for daily life style.
+                I'm a Computer Science Graduate from the University of Minnesota, Twin Cities with a passion for creating 
+                engaging web experiences, and useful apps to help people out in their daily life style.
               </p>
               <p>
-                This portfolio showcases my journey in full-stack development, 
-                featuring everything from interactive animations to AI-powered chat widgets!
+                This portfolio showcases my journey of how I first started learning about coding and my progression throughout my time
+                at university. Feel free to explore my projects, skills, and get in touch!
               </p>
-              <p>I still have a few projects to add so stay tuned!</p>
             </div>
           </div>
 
