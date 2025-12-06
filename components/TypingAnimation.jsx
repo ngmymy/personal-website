@@ -7,9 +7,9 @@ const TypingAnimation = () => {
   const [typeSpeed, setTypeSpeed] = useState(150);
 
   const texts = [
-    'Aspiring Software Engineer',
+    'New Grad Software Engineer',
     'Tech Enthusiast',
-    'Full-Stack Developer',
+    'Problem Solver',
     'Keyboard Nerd'
   ];
 

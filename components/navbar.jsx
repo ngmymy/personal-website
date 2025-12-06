@@ -11,8 +11,8 @@ const Navbar = () => {
       </h2>
       <ul className={styles.navList}>
         <li className={styles.navItem}>
-          <Link href="/aboutme" className={styles.navLink}>
-            About Me
+          <Link href="/" className={styles.navLink}>
+            Home
           </Link>
         </li>
         <li className={styles.navItem}>

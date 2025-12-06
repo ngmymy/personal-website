@@ -23,12 +23,8 @@
   justify-content: center;
   align-items: center;
   padding: 2rem;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  margin: 2rem;
+  /* margin: 2rem; */
   border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
 .heroSection {
@@ -79,7 +75,7 @@
 .text h3 {
   font-size: 2rem;
   margin-bottom: 1rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #7288e7 0%, #a372d5 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -95,53 +91,337 @@
 }
 
 .skillsSection {
-  margin-top: 5rem;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
   text-align: center;
   opacity: 0;
   animation: fadeInUp 1s ease-out 1.5s forwards;
   width: 100%;
 }
 
-.skillsGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 1rem;
-  max-width: 600px;
-  margin: 2rem auto 0;
+/* About Me Section Styles */
+.aboutMeSection {
+  margin-top: 3rem;
+  width: 100%;
+  max-width: 900px;
 }
 
-.skillBadge {
-  background: rgba(255, 255, 255, 0.2);
+.sectionNav {
+  max-width: 900px;
+  margin: 0 auto 2rem;
+}
+
+.sectionButtons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+.sectionButton {
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  cursor: pointer;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+}
+
+.sectionButton:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.sectionButton.active {
+  background: linear-gradient(135deg, #a78bfa 0%, #ec4899 100%);
+  border: none;
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(167, 139, 250, 0.3);
+}
+
+.contentSection {
+  max-width: 900px;
+  margin: 0 auto 2rem;
+}
+
+.contentCard {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 1s ease-out;
+}
+
+.contentTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+/* Text Styles */
+.textDarkGray {
+  color: #374151;
+}
+.textGray200 {
+  color: #e5e7eb;
+}
+
+.textGray300 {
+  color: #d1d5db;
+}
+
+.textGray400 {
+  color: #9ca3af;
+}
+
+.textWhite {
+  color: white;
+}
+
+.textPurple300 {
+  color: #c084fc;
+}
+
+.textPurple400 {
+  color: #a78bfa;
+}
+
+.textPink400 {
+  color: #fa99ca;
+}
+
+.leadingRelaxed {
+  line-height: 1.625;
+}
+
+/* Grid Layouts */
+.grid {
+  display: grid;
+}
+
+.gridCols1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.gridCols2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.gap2 {
+  gap: 0.5rem;
+}
+
+.gap3 {
+  gap: 0.75rem;
+}
+
+.gap4 {
+  gap: 1rem;
+}
+
+/* Spacing */
+.spaceY2 > * + * {
+  margin-top: 0.5rem;
+}
+
+.spaceY3 > * + * {
+  margin-top: 0.75rem;
+}
+
+.spaceY4 > * + * {
+  margin-top: 1rem;
+}
+
+.mt4 {
+  margin-top: 1rem;
+}
+
+.mt6 {
+  margin-top: 1.5rem;
+}
+
+.mb1 {
+  margin-bottom: 0.25rem;
+}
+
+.mb2 {
+  margin-bottom: 0.5rem;
+}
+
+.mb3 {
+  margin-bottom: 0.75rem;
+}
+
+/* Card Styles */
+.card {
+  background: rgba(0, 111, 72, 0.225);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 15px;
   padding: 1rem;
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: #333;
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-.skillBadge:hover {
-  transform: translateY(-5px);
-  background: rgba(255, 255, 255, 0.3);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-}
-
-.dev {
-  text-align: center;
-  font-size: 0.9rem;
-  color: #666;
-  margin-top: 2rem;
-  padding: 1rem;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  opacity: 0;
-  animation: fadeInUp 1s ease-out 2s forwards;
 }
 
+.cardGradient {
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.gradientPurplePink {
+  background: linear-gradient(135deg, rgba(167, 139, 250, 0.2) 0%, rgba(236, 72, 153, 0.2) 100%);
+}
+
+.gradientBlueCyan {
+  background: linear-gradient(135deg, rgba(96, 165, 250, 0.2) 0%, rgba(34, 211, 238, 0.2) 100%);
+}
+
+.gradientGreenEmerald {
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.2) 0%, rgba(16, 185, 129, 0.2) 100%);
+}
+
+.gradientOrangeRed {
+  background: linear-gradient(135deg, rgba(249, 115, 22, 0.2) 0%, rgba(239, 68, 68, 0.2) 100%);
+}
+
+.gradientPurpleBlue {
+  background: linear-gradient(135deg, rgba(167, 139, 250, 0.2) 0%, rgba(96, 165, 250, 0.2) 100%);
+}
+
+.gradientPinkOrange {
+  background: linear-gradient(135deg, rgba(236, 72, 153, 0.2) 0%, rgba(249, 115, 22, 0.2) 100%);
+}
+
+/* Value Cards */
+.valueCard {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.valueCard:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateX(0.5rem);
+}
+
+.valueCardContent {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.valueIcon {
+  font-size: 1.5rem;
+}
+
+.valueTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 0.25rem;
+}
+
+.valueDesc {
+  color: #d1d5db;
+  font-size: 0.875rem;
+}
+
+/* Fun Facts Section */
+.funFacts {
+  max-width: 900px;
+  margin: 2rem 2rem;
+}
+
+.funFactsCard {
+  background: linear-gradient(135deg, rgba(167, 139, 250, 0.2) 0%, rgba(236, 72, 153, 0.2) 100%);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.funFactsTitle {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.funFactsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  color: #d1d5db;
+}
+
+.funFact {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.funFactIcon {
+  font-size: 1.2rem;
+}
+
+/* Text Sizes */
+.text3xl {
+  font-size: 1.875rem;
+}
+
+.text2xl {
+  font-size: 1.5rem;
+}
+
+.textXl {
+  font-size: 1.25rem;
+}
+
+.textLg {
+  font-size: 1.125rem;
+}
+
+.textSm {
+  font-size: 0.875rem;
+  margin-bottom: 6px;
+}
+
+.textXs {
+  font-size: 0.75rem;
+}
+
+/* Font Weights */
+.fontSemibold {
+  font-weight: 600;
+}
+
+.fontBold {
+  font-weight: 700;
+}
+
+/* Flex Utilities */
+.flex {
+  display: flex;
+}
+
+.itemsStart {
+  align-items: flex-start;
+}
+
+.itemsCenter {
+  align-items: center;
+}
+
+/* Footer */
 .footer {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
@@ -156,7 +436,6 @@
 
 .footer a {
   color: #e1e1e1;
-  /* color: #b3b3b3; */
   text-decoration: none;
   font-size: 0.9rem;
   transition: color 0.3s ease;
@@ -167,46 +446,12 @@
 }
 
 .footerLink {
-  /* color: #e1e1e1; */
   text-decoration: none;
   margin-right: 5px;
   margin-left: 5px;
 }
 
-/* Floating elements */
-.floatingElement {
-  position: absolute;
-  animation: float 3s ease-in-out infinite;
-  opacity: 0.1;
-  pointer-events: none;
-}
-
-.floatingElement:nth-child(1) {
-  top: 20%;
-  left: 10%;
-  animation-delay: 0s;
-  font-size: 2rem;
-}
-
-.floatingElement:nth-child(2) {
-  top: 60%;
-  right: 15%;
-  animation-delay: 1s;
-  font-size: 1.5rem;
-}
-
-.floatingElement:nth-child(3) {
-  top: 80%;
-  left: 20%;
-  animation-delay: 2s;
-  font-size: 1.8rem;
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-20px); }
-}
-
+/* Animations */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -219,6 +464,12 @@
 }
 
 /* Responsive Design */
+@media (min-width: 768px) {
+  .mdGridCols2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 768px) {
   .about {
     flex-direction: column;
@@ -238,19 +489,22 @@
     font-size: 1rem;
   }
   
-  .skillsGrid {
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 0.8rem;
-  }
-  
-  .skillBadge {
-    padding: 0.8rem;
-    font-size: 0.8rem;
-  }
-  
   .content {
     margin: 1rem;
     padding: 1.5rem;
+  }
+
+  .gridCols2 {
+    grid-template-columns: 1fr;
+  }
+
+  .contentCard {
+    padding: 1.5rem;
+  }
+
+  .sectionButton {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
   }
 }
 
@@ -258,8 +512,8 @@
   .text h3 {
     font-size: 1.3rem;
   }
-  
-  .skillsGrid {
-    grid-template-columns: repeat(2, 1fr);
+
+  .contentTitle {
+    font-size: 1.5rem;
   }
 }

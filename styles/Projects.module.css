@@ -10,30 +10,29 @@
 .content {
   flex: 1;
   padding: 2rem;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
+  /* background: rgba(255, 255, 255, 0.1); */
+  /* backdrop-filter: blur(10px); */
   margin: 2rem;
   border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  min-height: 100vh;
+  /* border: 1px solid rgba(255, 255, 255, 0.2); */
+  /* box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); */
 }
 
 .header {
   text-align: center;
-  margin-top: 2rem;
-  margin-bottom: 3rem;
   opacity: 0;
   animation: fadeInUp 1s ease-out 0.3s forwards;
 }
 
 .title {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 700;
   background: linear-gradient(135deg, #60a5fa 0%, #c084fc 50%, #f472b6 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  margin-bottom: 1rem;
+  margin-bottom: 4rem;
 }
 
 .subtitle {
@@ -46,14 +45,14 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 2rem;
-  margin-bottom: 3rem;
+  /* margin-bottom: 3rem; */
   padding-left: 20%;
   padding-right: 20%;
 }
 
 .projectCard {
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 20px;
   overflow: hidden;
@@ -61,32 +60,13 @@
   opacity: 0;
   animation: fadeInUp 1s ease-out forwards;
   position: relative;
-  min-width: 200px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
 .projectCard:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(188, 184, 184, 0.429);
-  border-color: rgba(223, 225, 233, 0.656);
-}
-
-.comingSoon {
-  opacity: 0.7;
-  position: relative;
-}
-
-.comingSoonBadge {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
-  color: white;
-  padding: 0.3rem 0.8rem;
-  border-radius: 15px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  z-index: 10;
-  box-shadow: 0 2px 10px rgba(238, 90, 36, 0.3);
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(167, 139, 250, 0.3);
+  border-color: rgba(167, 139, 250, 0.5);
 }
 
 .projectImageContainer {
@@ -144,12 +124,12 @@
 .projectTitle {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #333;
+  color: white;
   margin-bottom: 0.8rem;
 }
 
 .projectDescription {
-  color: #212121;
+  color: #d1d5db;
   line-height: 1.6;
   margin-bottom: 1.5rem;
   font-size: 0.95rem;
@@ -161,7 +141,7 @@
 
 .techStack h4, .labels {
   font-size: 0.9rem;
-  color: #333;
+  color: #43a9fc;
   margin-bottom: 0.5rem;
   font-weight: 600;
 }
@@ -173,7 +153,7 @@
 }
 
 .techTag {
-  background: rgba(65, 89, 196, 0.5);
+  background: rgba(12, 189, 224, 0.5);
   color: #e6e6e6;
   padding: 0.3rem 0.8rem;
   border-radius: 12px;
@@ -188,7 +168,7 @@
 
 .features h4 {
   font-size: 0.9rem;
-  color: #333;
+  color: #c084fc;
   margin-bottom: 0.5rem;
   font-weight: 600;
 }
@@ -201,14 +181,14 @@
 
 .featureList li {
   font-size: 0.85rem;
-  color: #3a3a3a;
+  color: #d1d5db;
   margin-bottom: 0.3rem;
   position: relative;
   padding-left: 1rem;
 }
 
 .featureList li::before {
-  content: '➡';
+  content: '➜';
   position: absolute;
   left: 0;
   top: 0;
@@ -293,6 +273,11 @@
 @media (max-width: 768px) {
   .title {
     font-size: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .header {
+    margin-top: 0;
   }
   
   .subtitle {
@@ -302,6 +287,8 @@
   .projectsGrid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+    padding-left: 6%;
+    padding-right: 6%;
   }
   
   .content {

@@ -1,6 +1,5 @@
 import Head from 'next/head';
-import { useState, useEffect } from 'react';
-import Link from 'next/link';
+import { useState } from 'react';
 import Navbar from '../components/navbar';
 import MeteorShower from '../components/MeteorShower';
 import styles from '../styles/Projects.module.css';
@@ -59,7 +58,6 @@ export default function Projects() {
           <h1 className={styles.title}>My Projects</h1>
         </div>
 
-        {/* Projects Grid */}
         <div className={styles.projectsGrid}>
           {projects.map((project, index) => (
             <div
