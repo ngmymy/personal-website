@@ -34,10 +34,13 @@ export default function Home() {
       content: (
         <div className={styles.spaceY4}>
           <p className={`${styles.textGray200} ${styles.leadingRelaxed}`}>
-            I'm from St. Paul, MN and I graduated from the University of Minnesota, TC in May 2025 with a B.A. in Computer Science. 
+            I'm from St. Paul, MN and I graduated from the University of Minnesota, TC in May 2025 with a B.A. in Computer Science.
             The last two years of my undergraduate was very mentally draining as I navigated through some very difficult home obstacles alone while balancing schoolwork. 
             I decided to work a ton right after graduating and take a break after September 2025. During my break, I went to Paris for the first time, and focused on personal growth and finding my balance.
+          </p>
+          <p className={`${styles.textGray200} ${styles.leadingRelaxed}`}>
             Now that I'm back, my goal is to find a job that will help foster my career growth and allow me to create helpful tools for user experiences. 
+            I think working in med-tech would be awesome, as I've always admired doctors and want to use technology to help people improve their lives.
           </p>
           <div className={`${styles.spaceY4} ${styles.mt4}`}>
             <div className={`${styles.cardGradient} ${styles.gradientPurpleBlue}`} style={{ padding: '1.25rem' }}>
