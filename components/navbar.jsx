@@ -22,7 +22,7 @@ const Navbar = () => {
         </li>
         <li className={styles.navItem}>
           <Link 
-            href="https://drive.google.com/file/d/1OGLK8uKKZ3BgQ7rJtFdOSLemOIO1tnYW/view" 
+            href="https://drive.google.com/file/d/1SpB9PcWyUFKtRx0qB9P8oD5Kq-q8NK-e/view" 
             className={`${styles.navLink} ${styles.resumeLink}`}
             target="_blank"
             rel="noopener noreferrer"
