@@ -143,7 +143,7 @@ export default function Home() {
               </div>
               <h4 className={`${styles.textLg} ${styles.fontSemibold} ${styles.textWhite} ${styles.mb2}`}>Travel</h4>
               <p className={`${styles.textWhite} ${styles.textSm}`}>
-                I love exploring new places and cultures whether thats solo or with company! This october I went to Paris for the first time and it was amazing getting to finally see the famous landmarks and experience French culture.
+                I love exploring new places and cultures whether thats solo or with company! Every summer I go on retreats with my church group to different states in the U.S. to volunteer and serve catholic youth communities.
               </p>
             </div>
             <div className={`${styles.cardGradient} ${styles.gradientGreenEmerald}`}>

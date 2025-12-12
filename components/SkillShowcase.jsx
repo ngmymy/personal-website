@@ -22,7 +22,6 @@ const SkillShowcase = () => {
     { name: 'C', icon: '/icons/c.svg', isImage: true },
     { name: 'Java', icon: '/icons/java-original.svg', isImage: true },
     { name: 'C++', icon: '/icons/cplusplus.svg', isImage: true },
-    { name: 'Kotlin', icon: '/icons/kotlin-original.svg', isImage: true },
     { name: 'Git', icon: '/icons/git-original.svg', isImage: true },
     { name: 'CSS3', icon: '/icons/css3-original.svg', isImage: true },
     { name: 'HTML', icon: '/icons/html5-original.svg', isImage: true },
@@ -33,6 +32,7 @@ const SkillShowcase = () => {
   const secondarySkills = [
     { name: 'Node.js', icon: '/icons/nodejs-original.svg', isImage: true },
     { name: '.NET', icon: '/icons/dot-net-original.svg', isImage: true },
+    { name: 'Kotlin', icon: '/icons/kotlin-original.svg', isImage: true },
     { name: 'Raspberry Pi', icon: '/icons/raspberrypi-original.svg', isImage: true },
     { name: 'MongoDB', icon: '/icons/mongodb-original.svg', isImage: true },
     { name: 'Docker', icon: '/icons/docker-original.svg', isImage: true },
