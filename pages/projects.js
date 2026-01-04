@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { useState } from 'react';
 import Navbar from '../components/navbar';
-import MeteorShower from '../components/MeteorShower';
+import Snowfall from 'react-snowfall';
 import styles from '../styles/Projects.module.css';
 import Footer from '../components/footer';
 
@@ -49,7 +49,7 @@ export default function Projects() {
         <link rel="icon" href="/favicon.webp" />
       </Head>
 
-      <MeteorShower />
+      <Snowfall />
 
       <Navbar />
       

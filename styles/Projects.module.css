@@ -5,6 +5,7 @@
   font-family: 'Open Sans', sans-serif;
   position: relative;
   overflow: hidden;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
 }
 
 .content {

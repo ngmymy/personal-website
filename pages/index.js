@@ -1,11 +1,11 @@
 import Head from 'next/head';
 import { useEffect, useState } from 'react';
 import styles from '../styles/Home.module.css';
-import MeteorShower from '../components/MeteorShower';
 import Navbar from '../components/navbar';
 import TypingAnimation from '../components/TypingAnimation';
 import SkillShowcase from '../components/SkillShowcase';
 import Footer from '../components/footer';
+import Snowfall from 'react-snowfall';
 
 export default function Home() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -178,7 +178,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.webp" />
       </Head>
 
-      <MeteorShower />
+      <Snowfall />
 
       <main className={styles.main}>
         <Navbar />
