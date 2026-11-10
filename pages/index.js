@@ -34,13 +34,14 @@ export default function Home() {
       content: (
         <div className={styles.spaceY4}>
           <p className={`${styles.textGray200} ${styles.leadingRelaxed}`}>
-            I'm from St. Paul, MN and I graduated from the University of Minnesota, TC in May 2025 with a B.A. in Computer Science.
-            The last two years of my undergraduate was very mentally draining as I navigated through some very difficult home obstacles alone while balancing schoolwork. 
-            I decided to work a ton right after graduating and take a break after September 2025. During my break, I went to Paris for the first time, and focused on personal growth and finding my balance.
+            I'm from St. Paul, MN and I graduated from the University of Minnesota, TC in May 2025 with a degree in Computer Science. 
+            I currently work at General Dynamics Mission Systems as a Software Engineer in Bloomington, MN. 
+            
           </p>
           <p className={`${styles.textGray200} ${styles.leadingRelaxed}`}>
-            Now that I'm back, my goal is to find a job that will help foster my career growth and allow me to create helpful tools for user experiences. 
-            I think working in med-tech would be awesome, as I've always admired doctors and want to use technology to help people improve their lives.
+            I'm incredibly grateful for the opportunities I've had to learn and grow in my field. 
+            I do very meaningful work that has a real impact on the world, and I feel lucky to be able to contribute to projects that make a difference.
+            I enjoy collaborating with others, solving complex problems, and continuously challenging myself to improve. 
           </p>
           <div className={`${styles.spaceY4} ${styles.mt4}`}>
             <div className={`${styles.cardGradient} ${styles.gradientPurpleBlue}`} style={{ padding: '1.25rem' }}>
@@ -48,15 +49,15 @@ export default function Home() {
               <ul className={`${styles.spaceY2} ${styles.textGray300}`}>
                 <li className={`${styles.flex} ${styles.itemsStart} ${styles.gap2}`}>
                   <span className={`${styles.textPurple400}`} style={{ marginTop: '0.25rem' }}></span>
-                  <span>• Born in Vietnam, moved to U.S. at 5 years old</span>
+                  <span>• I was born in Vietnam, and moved to U.S. at 5 years old</span>
                 </li>
                 <li className={`${styles.flex} ${styles.itemsStart} ${styles.gap2}`}>
                   <span className={`${styles.textPurple400}`} style={{ marginTop: '0.25rem' }}></span>
-                  <span>• Exposed to coding from my brother and video games at 12 years old.</span>
+                  <span>• I like to go on long road trips by myself. The longest I've driven alone is 11 hours.</span>
                 </li>
                 <li className={`${styles.flex} ${styles.itemsStart} ${styles.gap2}`}>
                   <span className={`${styles.textPurple400}`} style={{ marginTop: '0.25rem' }}></span>
-                  <span>• I love contributing to community projects by building tools to integrate a modernized system for event registrations at my local Vietnamese Catholic Church. </span>
+                  <span>• On weekends, I dedicate my time to teaching sunday school and volunteering at my local community church.</span>
                 </li>
               </ul>
             </div>
